@@ -2,10 +2,14 @@
 Proyecto de Base de Datos I 2024
 
 Alumnos:
--Almada, Tomas Emanuel        DNI: 44876943
--Gimeno, Daniel Eduardo			  DNI:37327946
--Rodriguez, Maria Agustina		DNI: 40565365
--Trangoni, Diego Gerardo 			DNI: 34899698
+
+Almada, Tomas Emanuel         DNI: 44876943
+
+Gimeno, Daniel Eduardo			  DNI:37327946
+
+Rodriguez, Maria Agustina		  DNI: 40565365
+
+Trangoni, Diego Gerardo 			DNI: 34899698
 
 
 # Introduccion al caso de estudio.
