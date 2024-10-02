@@ -20,3 +20,5 @@ Una empresa que se especializa en transporte que tiene su sede central en Corrie
 
 El objetivo de este proyecto es facilitar el manejo de esta base de datos sobre la empresa de transporte, el como facilitar las gestión de los datos de los viajes que camiones todos los días viajan y derivan en muchos informes diarios, que en el propenso caso genere confusión a la hora de comprobar quienes conducían que camiones y que su dichosa carga este dentro de los reglamentos, sin que se transportan objetos no deseados o no mencionados, que a la hora de un camión realice un viaje no tenga accidentes o problemas por cargas no adecuadas o peligrosas para su modelo.
 
+Enlace a la documentación: https://github.com/TomasUNNE/ProyectoGrupo8Comision1/blob/main/Primera%20Entrega/Informe%20de%20Proyecto%202024.pdf
+
