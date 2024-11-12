@@ -1,6 +1,6 @@
 use caso_camiones;
 GO
--- Crear la función almacenada
+
 -- Crear la función almacenada
 CREATE FUNCTION dbo.calcular_kilometros_recorridos
 (
