@@ -1,7 +1,7 @@
 use caso_camiones;
 GO
--- Crear la funci髇 almacenada
--- Crear la funci髇 almacenada
+-- Crear la funci贸n almacenada
+-- Crear la funci贸n almacenada
 CREATE FUNCTION dbo.calcular_kilometros_recorridos
 (
     @id_camion INT,
@@ -49,11 +49,11 @@ BEGIN
         RETURN;
     END
 
-    -- Insertar el viaje con generaci髇 de id_viaje autom醫ico
+    -- Insertar el viaje con generaci贸n de id_viaje autom谩tico
     INSERT INTO viaje (fecha, id_viaje, duracion, distancia, peso_transportado, id_producto, id_camion, id_sucursal_origen, id_sucursal_destino, id_chofer)
     VALUES (
         @fecha,
-        (SELECT ISNULL(MAX(id_viaje) + 1, 1) FROM viaje),  -- Generaci髇 del id_viaje
+        (SELECT ISNULL(MAX(id_viaje) + 1, 1) FROM viaje),  -- Generaci贸n del id_viaje
         @duracion,
         @distancia,
         @peso_transportado,
@@ -65,3 +65,22 @@ BEGIN
     );
 END;
 GO
+
+-----ejemplos de ejecuci贸n
+
+--funcion
+DECLARE @kilometros INT;
+SET @kilometros = dbo.calcular_kilometros_recorridos(1, '2024-01-01', '2024-12-31');
+SELECT @kilometros AS KilometrosRecorridos;
+
+--procedimiento
+EXEC dbo.registrar_viaje
+    @fecha = '2024-11-12',
+    @duracion = 120,
+    @distancia = 300,
+    @peso_transportado = 5000,
+    @id_producto = 1,
+    @id_camion = 1,
+    @id_sucursal_origen = 2,
+    @id_sucursal_destino = 3,
+    @id_chofer = 1;
