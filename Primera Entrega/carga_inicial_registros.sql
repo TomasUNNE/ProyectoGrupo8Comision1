@@ -132,6 +132,7 @@ BEGIN
     SET @camionId = @camionId + 1; -- Pasar al siguiente camión
 END
 
+
 --insertar SUCURSALES
 DECLARE @ciudadId INT;
 DECLARE @domicilio VARCHAR(200);
@@ -297,7 +298,7 @@ SELECT @totalProductos = COUNT(*) FROM camion_producto; -- Total de productos
 SELECT @totalSucursales = COUNT(*) FROM sucursal;
 SELECT @totalChoferes = COUNT(*) FROM chofer; -- Total de choferes
 
-WHILE @i <= 10000
+WHILE @i <= 1000000
 BEGIN
     -- Generar datos aleatorios
     SET @fecha = CONVERT(INT, FORMAT(DATEADD(DAY, ABS(CHECKSUM(NEWID()) % 365), GETDATE()), 'yyyyMMdd')); -- Fecha aleatoria en formato YYYYMMDD

@@ -124,9 +124,12 @@ CREATE TABLE camion_chofer
   id_chofer INT NOT NULL,
   CONSTRAINT PK_camion_chofer PRIMARY KEY (id_camion, id_chofer),
   CONSTRAINT FK_camion_chofer_camion FOREIGN KEY (id_camion) REFERENCES camion(id_camion),
-  CONSTRAINT FK_camion_chofer_chofer FOREIGN KEY (id_chofer) REFERENCES chofer(id_chofer),
-  CONSTRAINT DF_camion_chofer_fecha_asignacion DEFAULT GETDATE() FOR fecha_asignacion
+  CONSTRAINT FK_camion_chofer_chofer FOREIGN KEY (id_chofer) REFERENCES chofer(id_chofer)
+  
 );
+
+ALTER TABLE camion_chofer
+ADD CONSTRAINT DF_camion_chofer_fecha_asignacion DEFAULT GETDATE() FOR fecha_asignacion;
 
 -- Tabla viaje
 
