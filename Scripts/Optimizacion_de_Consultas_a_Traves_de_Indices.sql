@@ -15,6 +15,8 @@ WHERE fecha BETWEEN 20240101 AND 20261231;
 SET STATISTICS TIME OFF;
 SET STATISTICS IO OFF;
 
+--Resultado: CPU time = 4292 ms,  elapsed time = 5688 ms.
+
 -- ****************************************
 -- 2.	Índice agrupado en columna de fecha
 -- ****************************************
@@ -36,6 +38,8 @@ WHERE fecha BETWEEN 20240101 AND 20261231;
 SET STATISTICS TIME OFF;
 SET STATISTICS IO OFF;
 
+--Resultado: CPU time = 893 ms,  elapsed time = 4697 ms.
+
 -- ****************************************************
 -- 3.	Índice agrupado en fecha e inclusión de columna
 -- ****************************************************
@@ -56,3 +60,5 @@ WHERE fecha BETWEEN 20240101 AND 20261231;
 
 SET STATISTICS TIME OFF;
 SET STATISTICS IO OFF;
+
+--Resultado: CPU time = 530 ms,  elapsed time = 737 ms.
